@@ -44,11 +44,10 @@ public class ShoppingList {
         return result.toString();
     }
 
-    public ShoppingItem searchByName(Sring itemName) {
+    public ShoppingItem searchByName(String itemName) {
         for (int i = 0; i < size; i++) {
-            if (items[i].getName().equals(itemName)) {
+            if (items[i].getName().equals(itemName))
                 return items[i];
-            }
         }
         return null;
     }
