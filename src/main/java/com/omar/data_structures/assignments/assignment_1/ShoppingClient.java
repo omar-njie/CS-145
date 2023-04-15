@@ -21,7 +21,7 @@ public class ShoppingClient {
             user_choice = input.nextInt();
             input.nextLine();
 
-            switch (user_choice) {
+            switch (user_choice) { // @since Java 14
                 case 1 -> display_menu();
                 case 2 -> add_item(shoppingList);
                 case 3 -> change_quantity(shoppingList);
@@ -97,6 +97,7 @@ public class ShoppingClient {
             System.out.println(list.toString());
             System.out.printf("Total cost: $%.2f\n", list.getTotalCost());
         }
+        System.out.println("=====================================");
     }
 
     public static void exit() {
