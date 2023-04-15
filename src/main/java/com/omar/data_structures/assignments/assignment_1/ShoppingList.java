@@ -2,7 +2,7 @@ package com.omar.data_structures.assignments.assignment_1;
 
 public class ShoppingList {
 
-    private ShoppingItem[] items;
+    private final ShoppingItem[] items;
     private int size;
 
 
@@ -52,6 +52,7 @@ public class ShoppingList {
         return null;
     }
 
-    // 
-
+    public boolean isEmpty() {
+        return size == 0;
+    }
 }

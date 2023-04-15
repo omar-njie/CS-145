@@ -1,12 +1,15 @@
+/*
 package com.omar.learn.implement_collections.linked_lists;
 
 
 import com.omar.data_structures.assignments.assignment_5.Card;
 
+*/
 /**
  * @author Omar
  * @version 11/15/22
- */
+ *//*
+
 public class ListNodeEx {
 
     // usual approach for defining a node, no encapsulation
@@ -51,3 +54,4 @@ public class ListNodeEx {
     }
 
 }
+*/
