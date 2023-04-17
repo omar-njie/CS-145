@@ -2,6 +2,17 @@ package com.omar.data_structures.assignments.assignment_1;
 
 import java.util.Scanner;
 
+/**
+ * A client program that allows the user to create a shopping list.
+ * The user can add items to the list, change the quantity of an item,
+ * and display the list.
+ *
+ * @author Omar
+ * @version 04/16/2023
+ * @see ShoppingList
+ * @see ShoppingItem
+ */
+
 public class ShoppingClient {
 
     public static void main(String[] args) {
@@ -21,7 +32,7 @@ public class ShoppingClient {
             user_choice = input.nextInt();
             input.nextLine();
 
-            switch (user_choice) { // @since Java 14
+            switch (user_choice) { // Enhanced Switch Statement @since Java 14
                 case 1 -> display_menu();
                 case 2 -> add_item(shoppingList);
                 case 3 -> change_quantity(shoppingList);
@@ -33,6 +44,10 @@ public class ShoppingClient {
         } while (user_choice != 5);
     }
 
+
+    /**
+     * Displays the menu.
+     */
     public static void display_menu() {
         System.out.println("Select a choice from the menu (1-5):");
         System.out.println("1. Display Menu");
@@ -42,6 +57,11 @@ public class ShoppingClient {
         System.out.println("5. Exit");
     }
 
+
+    /**
+     * Adds an item to the shopping list.
+     * @param list The shopping list.
+     */
     public static void add_item(ShoppingList list) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the name of the item: ");
@@ -68,6 +88,11 @@ public class ShoppingClient {
         list.add(item);
     }
 
+
+    /**
+     * Changes the quantity of an item in the shopping list.
+     * @param list The shopping list.
+     */
     public static void change_quantity(ShoppingList list) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the name of the item: ");
@@ -90,6 +115,11 @@ public class ShoppingClient {
         }
     }
 
+
+    /**
+     * Displays the shopping list.
+     * @param list The shopping list.
+     */
     public static void display_shopping_list(ShoppingList list) {
         if (list.isEmpty()) {
             System.out.println("ShoppingList is empty");
@@ -100,6 +130,10 @@ public class ShoppingClient {
         System.out.println("=====================================");
     }
 
+
+    /**
+     * Exits the program.
+     */
     public static void exit() {
         System.out.println("Exited successfully!!");
         System.exit(0);

@@ -3,6 +3,8 @@ package com.omar.data_structures.assignments.assignment_1;
 /**
  * Represents a shopping item with a name, quantity, and price.
  *
+ * @author Omar
+ * @version 04/16/2023
  * @see ShoppingList
  */
 public class ShoppingItem {

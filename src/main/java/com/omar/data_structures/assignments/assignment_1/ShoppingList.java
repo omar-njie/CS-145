@@ -7,7 +7,7 @@ package com.omar.data_structures.assignments.assignment_1;
  * is empty, and generating a string representation of the list.
  *
  * @author Omar
- * @version 1.0
+ * @version 04/16/2023
  * @see ShoppingItem
  * @see StringBuilder
  */
