@@ -5,7 +5,8 @@ cd /Users/omar/Desktop/College/Computer Science/Spring-Quarter-2023/CS-145
 
 git add .
 
-git commit -m "Update"
+# shellcheck disable=SC2006
+git commit -m "Added Lectures `date +%m-%d-%Y` ch 9"
 
 git push
 
