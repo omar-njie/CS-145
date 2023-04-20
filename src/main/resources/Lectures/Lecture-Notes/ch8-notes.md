@@ -122,6 +122,20 @@ public class Point {
 - Mutator: a method that modifies an object's state
 - Constructor: a special method that is called when an object is created, with the same name as the class and no return type
 - The `this` keyword: refers to the implicit parameter inside a class, and can be used to refer to fields or call methods on the object it was called on
+----
+- A class is used for any of the following in a large program:
+  - a program : Has a main and perhaps other static methods.
+    - example: GuessingGame, Birthday, MadLibs, CritterMain
+    - does not usually declare any static fields (except final)
+    
+  - an object class : Defines a new type of objects.
+    - example: Point, BankAccount, Date, Critter, FratGuy
+    - declares object fields, constructor(s), and methods
+    - might declare static fields or methods, but these are less of a focus
+    - should be encapsulated (all fields and static fields private)
+  - a module: Utility code implemented as static methods.
+    - example: Math Library.
+
 
 # Code Example:
 ```java
@@ -163,9 +177,3 @@ public class Point {
 }
 
 ```
-
-# Exercises:
-- [Exercise 1](
-
-
-
