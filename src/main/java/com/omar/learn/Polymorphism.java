@@ -50,6 +50,7 @@ public class Polymorphism {
         System.out.println("++++++++++++++++++++++++++++++");
         // ((Third) var5).method1(); // ClassCastException
         ((First) var6).method3();
+        System.out.println("++++++++++++++++++++++++++++++");
         // ((Second) var6).method1(); // not working
         ((Second) var6).method3();
 
@@ -61,6 +62,7 @@ public class Polymorphism {
         System.out.println(" And uses the " + e.getVacationForm() + " vacation form.");
     }
 }
+
 
 class Employee {
     public String name;
