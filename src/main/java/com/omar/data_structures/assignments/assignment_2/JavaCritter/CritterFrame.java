@@ -46,11 +46,9 @@ public class CritterFrame extends JFrame {
         JPanel p = new JPanel();
 
         final JSlider slider = new JSlider();
-        slider.addChangeListener(new ChangeListener() {
-            public void stateChanged(ChangeEvent e) {
-                double ratio = 1000.0 / (1 + Math.pow(slider.getValue(), 0.3));
-                myTimer.setDelay((int) (ratio - 180));
-            }
+        slider.addChangeListener(e -> {
+            double ratio = 1000.0 / (1 + Math.pow(slider.getValue(), 0.3));
+            myTimer.setDelay((int) (ratio - 180));
         });
         slider.setValue(20);
         p.add(new JLabel("slow"));
@@ -58,44 +56,26 @@ public class CritterFrame extends JFrame {
         p.add(new JLabel("fast"));
 
         JButton b1 = new JButton("start");
-        b1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                myTimer.start();
-            }
-        });
+        b1.addActionListener(e -> myTimer.start());
         p.add(b1);
         JButton b2 = new JButton("stop");
-        b2.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                myTimer.stop();
-            }
-        });
+        b2.addActionListener(e -> myTimer.stop());
         p.add(b2);
         JButton b3 = new JButton("step");
-        b3.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                doOneStep();
-            }
-        });
+        b3.addActionListener(e -> doOneStep());
         p.add(b3);
         
         // add debug button
         JButton b4 = new JButton("debug");
-        b4.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                myModel.toggleDebug();
-                myPicture.repaint();
-            }
+        b4.addActionListener(e -> {
+            myModel.toggleDebug();
+            myPicture.repaint();
         });
         p.add(b4);
 
         // add 100 button
         JButton b5 = new JButton("next 100");
-        b5.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                multistep(100);
-            }
-        });
+        b5.addActionListener(e -> multistep(100));
         p.add(b5);
 
         add(p, BorderLayout.SOUTH);

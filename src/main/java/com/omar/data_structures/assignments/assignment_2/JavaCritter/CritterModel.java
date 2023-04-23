@@ -271,7 +271,7 @@ public class CritterModel {
         return simulationCount;
     }
 
-    private class PrivateData {
+    private static class PrivateData {
         public Point p;
         public Critter.Direction direction;
         public Color color;
