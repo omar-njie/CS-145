@@ -155,11 +155,7 @@ public class CritterFrame extends JFrame {
     // post: creates a timer that calls the model's update
     //       method and repaints the display
     private void addTimer() {
-        ActionListener updater = new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                doOneStep();
-            }
-        };
+        ActionListener updater = e -> doOneStep();
         myTimer = new javax.swing.Timer(0, updater);
         myTimer.setCoalesce(true);
     }
