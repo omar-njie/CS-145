@@ -1,4 +1,5 @@
-package com.omar.data_structures.assignments.assignment_2.JavaCritter;// This is the superclass of all of the Critter classes.  Your class should
+package com.omar.data_structures.assignments.assignment_2.JavaCritter;
+// This is the superclass of all of the Critter classes.  Your class should
 // extend this class.  The class provides several kinds of constants:
 //
 //    type Neighbor  : WALL, EMPTY, SAME, OTHER
@@ -39,17 +40,17 @@ public class Critter {
         NORTH, SOUTH, EAST, WEST
     };
 
-    // This method should be overriden (default action is turning left)
+    // This method should be overridden (default action is turning left)
     public Action getMove(CritterInfo info) {
         return Action.LEFT;
     }
 
-    // This method should be overriden (default color is black)
+    // This method should be overridden (default color is black)
     public Color getColor() {
         return Color.BLACK;
     }
 
-    // This method should be overriden (default display is "?")
+    // This method should be overridden (default display is "?")
     public String toString() {
         return "?";
     }
