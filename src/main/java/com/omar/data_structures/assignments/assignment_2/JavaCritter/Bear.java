@@ -16,6 +16,11 @@ public class Bear extends Critter {
     private int move_count;
 
     /**
+     * Creates a bear object.
+     */
+    public Bear() {}
+
+    /**
      * Decide whether the bear is a normal bear or a polar bear
      * @param polar true if the bear is a polar bear
      */
