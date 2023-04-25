@@ -94,6 +94,22 @@ public class ArrayListEx {
         removeStars(star);
         System.out.println(star);
 
+        ArrayList<String> list1 = new ArrayList<>();
+        ArrayList<String> list2 = new ArrayList<>();
+        swapPairs(list1, list2);
+        System.out.println(list1);
+        System.out.println(list2);
+
+        ArrayList<String> strings = new ArrayList<String>();
+        strings.add("foo");
+        strings.add("bar");
+        strings.add("baz");
+        strings.add("qux");
+        strings.add("quux");
+
+        removeEvenLength(strings);
+
+        System.out.println(strings);
 
 
     }
@@ -119,6 +135,29 @@ public class ArrayListEx {
         for (int i = 1; i < list.size(); i+=2) {
             list.remove(i);
             i--;
+        }
+    }
+
+    static void swapPairs(ArrayList<String> list1, ArrayList<String> list2) {
+        String[] words = {"four", "score", "and", "seven", "years", "ago"};
+        String[] words2 = {"our", "fathers", "brought", "forth", "on", "this", "continent"};
+        for (int i = 0; i < words.length; i++) {
+            list1.add(words[i]);
+        }
+        for (int i = 0; i < words2.length; i++) {
+            list2.add(words2[i]);
+        }
+        System.out.println(list1);
+        System.out.println(list2);
+    }
+
+    public static void removeEvenLength(ArrayList<String> strings) {
+        for (int i = 0; i < strings.size(); i++) {
+            String s = strings.get(i);
+            if (s.length() % 2 == 0) {
+                strings.remove(i);
+                i--;
+            }
         }
     }
 }
