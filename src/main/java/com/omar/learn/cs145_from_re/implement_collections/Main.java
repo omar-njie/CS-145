@@ -1,12 +1,15 @@
+/*
 package com.omar.learn.implement_collections;
 
 import com.omar.learn.implement_collections.array_list.ArrayIntList;
 import com.omar.learn.implement_collections.linked_lists.LinkedIntList;
 
+*/
 /**
  * @author Omar
  * @version 11/4/22
- */
+ *//*
+
 public class Main {
 
     public static void main(String[] args) {
@@ -60,3 +63,4 @@ public class Main {
         System.out.println("list3 after adding 10 at index 0: " + list3);
     }
 }
+*/
