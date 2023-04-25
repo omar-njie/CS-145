@@ -41,3 +41,56 @@ Refine your code: If you encounter any issues or bugs during testing, refine you
 ---
 By following these steps, you can approach ArrayLists problems in a systematic and effective way, and increase your chances of solving the problem correctly and efficiently.
 </p>
+
+```java
+    static void name(ArrayList<String> list) {
+        for (int i = 0; i < list.size(); i++) {
+            String str = list.get(i);
+            if (str.endsWith("s")) {
+                list.remove(i);
+                i--;
+            }
+        }
+    }
+```    
+```java
+    static void addStars(ArrayList<String> list) {
+        for (int i = 1; i < list.size(); i+=2) {
+            String s = "*";
+            list.add(i, s);
+        }
+    }
+```
+
+```java
+    static void removeStars(ArrayList<String> list) {
+        for (int i = 1; i < list.size(); i+=2) {
+            list.remove(i);
+            i--;
+        }
+    }
+```
+
+```java
+    static void swapPairs(ArrayList<String> list1, ArrayList<String> list2) {
+        String[] words = {"four", "score", "and", "seven", "years", "ago"};
+        String[] words2 = {"our", "fathers", "brought", "forth", "on", "this", "continent"};
+        for (int i = 0; i < words.length; i++)
+            list1.add(words[i]);
+        for (int i = 0; i < words2.length; i++)
+            list2.add(words2[i]);
+        System.out.println(list1);
+        System.out.println(list2);
+    }
+```
+```java
+    public static void removeEvenLength(ArrayList<String> strings) {
+        for (int i = 0; i < strings.size(); i++) {
+            String s = strings.get(i);
+            if (s.length() % 2 == 0) {
+                strings.remove(i);
+                i--;
+            }
+        }
+    }
+```
