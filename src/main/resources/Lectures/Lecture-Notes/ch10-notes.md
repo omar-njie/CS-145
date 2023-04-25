@@ -38,7 +38,7 @@ When working with ArrayLists problems, there are a few steps you can follow to h
 4. Test your code: Once you have written your code, test it thoroughly to make sure it produces the expected output. Use a variety of test cases to check that your code works under different conditions.
 Refine your code: If you encounter any issues or bugs during testing, refine your code to fix the problems. Look for ways to optimize your code and make it more efficient.
 5. Document your code: Once your code is working correctly, document it so that others can understand how it works. Include comments, documentation, and instructions on how to use your code.
----
+
 By following these steps, you can approach ArrayLists problems in a systematic and effective way, and increase your chances of solving the problem correctly and efficiently.
 </p>
 
