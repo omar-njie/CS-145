@@ -32,11 +32,12 @@
 <p>
 When working with ArrayLists problems, there are a few steps you can follow to help you solve the problem more effectively:
 
-Understand the problem: Make sure you understand the problem statement and what is being asked of you. Identify the input and output requirements and any constraints or special conditions that need to be taken into account.
-Plan your solution: Once you understand the problem, plan out how you will solve it. Break the problem down into smaller steps and identify the data structures and algorithms you will use.
-Write your code: Using your plan as a guide, write your code. Make sure to use good coding practices such as proper naming conventions, commenting your code, and breaking your code into manageable functions.
-Test your code: Once you have written your code, test it thoroughly to make sure it produces the expected output. Use a variety of test cases to check that your code works under different conditions.
+1. Understand the problem: Make sure you understand the problem statement and what is being asked of you. Identify the input and output requirements and any constraints or special conditions that need to be taken into account.
+2. Plan your solution: Once you understand the problem, plan out how you will solve it. Break the problem down into smaller steps and identify the data structures and algorithms you will use.
+3. Write your code: Using your plan as a guide, write your code. Make sure to use good coding practices such as proper naming conventions, commenting your code, and breaking your code into manageable functions.
+4. Test your code: Once you have written your code, test it thoroughly to make sure it produces the expected output. Use a variety of test cases to check that your code works under different conditions.
 Refine your code: If you encounter any issues or bugs during testing, refine your code to fix the problems. Look for ways to optimize your code and make it more efficient.
-Document your code: Once your code is working correctly, document it so that others can understand how it works. Include comments, documentation, and instructions on how to use your code.
+5. Document your code: Once your code is working correctly, document it so that others can understand how it works. Include comments, documentation, and instructions on how to use your code.
+---
 By following these steps, you can approach ArrayLists problems in a systematic and effective way, and increase your chances of solving the problem correctly and efficiently.
 </p>
