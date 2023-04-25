@@ -1,12 +1,9 @@
-/*
 package com.omar.learn.implement_collections.linked_lists;
 
-*/
 /**
  * @author Omar
  * @version 11/16/22
- *//*
-
+ */
 public class LinkedIntList {
 
     private ListNodeEx front;
@@ -148,4 +145,3 @@ public class LinkedIntList {
         }
     }
 }
-*/

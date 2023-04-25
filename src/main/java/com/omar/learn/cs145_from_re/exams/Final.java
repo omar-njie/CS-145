@@ -1,14 +1,11 @@
-/*
 package com.omar.learn.exams;
 
 import com.omar.learn.trees.binary_tree.IntTreeNode;
 
-*/
 /**
  * @author Omar
  * @version 12.8.22
- *//*
-
+ */
 public class Final {
 
     private IntTreeNode root;
@@ -63,8 +60,7 @@ public class Final {
         }
     }
 
-   */
-/* public void remove2nd() {
+   /* public void remove2nd() {
         IntTreeNode temp = frontNode;
         IntTreeNode beforeTemp;
         if (temp == null) return;
@@ -76,11 +72,9 @@ public class Final {
         beforeTemp.next = temp.next;
         // For DLL add the next line
         // beforetemp.next.previous = beforeTemp;
-    }*//*
-
+    }*/
 
 
 
 
     }
-*/
