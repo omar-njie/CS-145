@@ -73,7 +73,52 @@ public class ArrayListEx {
         places.remove(1);
         System.out.println("Final result: " + places);
 
+        ArrayList<String> names = new ArrayList<>();
+        names.add("zinhos");
+        names.add("omar");
+        names.add("tims");
+        names.add("andrews");
+        names.add("james");
+        names.add("tim");
+
+        System.out.println(names);
+
+        ArrayList<String> star = new ArrayList<>();
+        star.add("the");
+        star.add("quick");
+        star.add("brown");
+        star.add("fox");
+
+        addStars(star);
+        System.out.println(star);
+        removeStars(star);
+        System.out.println(star);
 
 
+
+    }
+
+    static void name(ArrayList<String> list) {
+        for (int i = 0; i < list.size(); i++) {
+            String str = list.get(i);
+            if (str.endsWith("s")) {
+                list.remove(i);
+                i--;
+            }
+        }
+    }
+
+    static void addStars(ArrayList<String> list) {
+        for (int i = 1; i < list.size(); i+=2) {
+            String s = "*";
+            list.add(i, s);
+        }
+    }
+
+    static void removeStars(ArrayList<String> list) {
+        for (int i = 1; i < list.size(); i+=2) {
+            list.remove(i);
+            i--;
+        }
     }
 }
