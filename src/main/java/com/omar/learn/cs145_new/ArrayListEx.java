@@ -57,6 +57,21 @@ public class ArrayListEx {
         // set: get stuff in the list and replace it
         list.set(1, "Timothy");
 
+        // remove
+        list.remove(0);
+
+        ArrayList<String> places = new ArrayList<>();
+        places.add("New York");
+        places.add("Chicago");
+        places.add("Los Angeles");
+        places.add("San Francisco");
+        places.add("Seattle");
+
+        places.remove(0);
+        System.out.println(places);
+
+        places.remove(1);
+        System.out.println("Final result: " + places);
 
 
 
