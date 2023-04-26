@@ -105,6 +105,12 @@ The following table shows the time complexity of the operations on a Set:
 |-----------|---------|----------|---------------|
 | add       | O(1)    | O(log n) | O(1)          |
 | remove    | O(1)    | O(log n) | O(1)          |
+| contains  | O(1)    | O(log n) | O(1)          |
+| size      | O(1)    | O(1)     | O(1)          |
+| isEmpty   | O(1)    | O(1)     | O(1)          |
+| clear     | O(1)    | O(1)     | O(1)          |
+| equals    | O(n)    | O(n)     | O(n)          |
+
 
 ## References
 
