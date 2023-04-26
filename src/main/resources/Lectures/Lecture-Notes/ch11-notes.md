@@ -63,6 +63,37 @@ The Stream API was introduced in Java 8 and provides a way to process collection
 
 Java collections are not thread-safe by default. To make a collection thread-safe, you can use the synchronized wrapper classes provided by the Collections class.
 
+## List Methods:
+| Method                                       | Description                                                                                                   |
+|----------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| add(E element)                               | Adds the specified element to the end of the list.                                                            |
+| add(int index, E element)                    | Adds the specified element at the specified position in the list.                                             |
+| addAll(Collection<? extends E> c)            | Adds all of the elements in the specified collection to the end of the list.                                  |
+| addAll(int index, Collection<? extends E> c) | Adds all of the elements in the specified collection at the specified position in the list.                   |
+| clear()                                      | Removes all of the elements from the list.                                                                    |
+| contains(Object o)                           | Returns true if the list contains the specified element.                                                      |
+| containsAll(Collection<?> c)                 | Returns true if the list contains all of the elements in the specified collection.                            |
+| equals(Object o)                             | Compares the specified object with the list for equality.                                                     |
+| get(int index)                               | Returns the element at the specified position in the list.                                                    |
+| hashCode()                                   | Returns the hash code value for the list.                                                                     |
+| indexOf(Object o)                            | Returns the index of the first occurrence of the specified element in the list.                               |
+| isEmpty()                                    | Returns true if the list is empty.                                                                            |
+| iterator()                                   | Returns an iterator over the elements in the list.                                                            |
+| lastIndexOf(Object o)                        | Returns the index of the last occurrence of the specified element in the list.                                |
+| listIterator()                               | Returns a list iterator over the elements in the list.                                                        |
+| listIterator(int index)                      | Returns a list iterator over the elements in the list, starting at the specified position.                    |
+| remove(Object o)                             | Removes the first occurrence of the specified element from the list.                                          |
+| remove(int index)                            | Removes the element at the specified position in the list.                                                    |
+| removeAll(Collection<?> c)                   | Removes all of the elements in the specified collection from the list.                                        |
+| retainAll(Collection<?> c)                   | Retains only the elements in the list that are contained in the specified collection.                         |
+| set(int index, E element)                    | Replaces the element at the specified position in the list with the specified element.                        |
+| size()                                       | Returns the number of elements in the list.                                                                   |
+| sort(Comparator<? super E> c)                | Sorts the list according to the order induced by the specified comparator.                                    |
+| spliterator()                                | Creates a spliterator over the elements in the list.                                                          |
+| subList(int fromIndex, int toIndex)          | Returns a view of the portion of the list between the specified fromIndex, inclusive, and toIndex, exclusive. |
+| toArray()                                    | Returns an array containing all of the elements in the list.                                                  |
+| toArray(T[] a)                               | Returns an array containing all of the elements in the list, using the specified array if it is large enough. |
+
 ## Code Examples:
 
 Creating a List:
