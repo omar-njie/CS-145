@@ -1,0 +1,122 @@
+// set: A collection of unique values (no duplicates allowed)
+//      that can perform the following operations efficiently:
+//      add, remove, search (contains), size, isEmpty, clear, equals
+
+// We don't think of a set as having indexes; we just add things
+// to the set in general and don't worry about order
+
+// Set implementation:
+// In Java, sets are represented by the Set interface in java.util
+// Set is implemented by HashSet, TreeSet, and LinkedHashSet
+
+// HashSet: implemented using a hash table array;
+//          very fast: O(1) for add, remove, and contains (All operations)
+//          elements are stored in unpredictable order
+
+// TreeSet: implemented using a binary search tree;
+//          pretty fast: O(log n) for add, remove, and contains (All operations)
+//          elements are stored in sorted order
+
+// LinkedHashSet: O(1) but stores in order of insertion
+
+--------------------
+
+# Set in Java
+
+A Set is a collection of unique values where duplicates are not allowed. It is represented by the `Set` interface in `java.util` package. A Set performs the following operations efficiently: add, remove, search (contains), size, isEmpty, clear, and equals. Sets do not have indexes, and elements are added to the Set without worrying about order.
+
+## Set Implementation
+
+In Java, there are three main implementations of the `Set` interface:
+
+- `HashSet`
+- `TreeSet`
+- `LinkedHashSet`
+
+### HashSet
+
+A `HashSet` is implemented using a hash table array. It is very fast with O(1) time complexity for add, remove, and contains operations. `HashSet` does not store the elements in any particular order.
+
+Example:
+
+```java
+Set<String> hashSet = new HashSet<>();
+hashSet.add("apple");
+hashSet.add("banana");
+hashSet.add("orange");
+
+System.out.println(hashSet.contains("apple")); // Output: true
+System.out.println(hashSet.contains("grape")); // Output: false
+
+hashSet.remove("banana");
+
+System.out.println(hashSet); // Output: [orange, apple]
+```
+
+### TreeSet
+
+A `TreeSet` is implemented using a binary search tree. It is pretty fast with O(log n) time complexity for add, remove, and contains operations. `TreeSet` stores the elements in sorted order.
+
+Example:
+
+```java
+Set<String> treeSet = new TreeSet<>();
+treeSet.add("apple");
+treeSet.add("banana");
+treeSet.add("orange");
+
+System.out.println(treeSet.contains("apple")); // Output: true
+System.out.println(treeSet.contains("grape")); // Output: false
+
+treeSet.remove("banana");
+
+System.out.println(treeSet); // Output: [apple, orange]
+```
+
+### LinkedHashSet
+
+A `LinkedHashSet` is similar to `HashSet`, but it maintains the order of insertion. It is fast with O(1) time complexity for add, remove, and contains operations.
+
+Example:
+
+```java
+Set<String> linkedHashSet = new LinkedHashSet<>();
+linkedHashSet.add("apple");
+linkedHashSet.add("banana");
+linkedHashSet.add("orange");
+
+System.out.println(linkedHashSet.contains("apple")); // Output: true
+System.out.println(linkedHashSet.contains("grape")); // Output: false
+
+linkedHashSet.remove("banana");
+
+System.out.println(linkedHashSet); // Output: [apple, orange]
+```
+
+### Conclusion
+
+Sets are useful in situations where we need to store unique values and order does not matter. Depending on the use case, one of the three Set implementations can be chosen for optimal performance.
+
+## Set Operations
+
+The following table shows the time complexity of the operations on a Set:
+
+| Operation | HashSet | TreeSet  | LinkedHashSet |
+|-----------|---------|----------|---------------|
+| add       | O(1)    | O(log n) | O(1)          |
+| remove    | O(1)    | O(log n) | O(1)          |
+
+## References
+
+- [Set (Java Platform SE 8 )](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html)
+- [HashSet (Java Platform SE 8 )](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
+- [TreeSet (Java Platform SE 8 )](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)
+- [LinkedHashSet (Java Platform SE 8 )](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)
+- [Set (Java Collections)](https://www.javatpoint.com/java-set)
+- [HashSet in Java](https://www.javatpoint.com/java-hashset)
+- [TreeSet in Java](https://www.javatpoint.com/java-treeset)
+- [LinkedHashSet in Java](https://www.javatpoint.com/java-linkedhashset)
+- [Java Set Interface](https://www.geeksforgeeks.org/set-in-java/)
+- [HashSet vs TreeSet vs LinkedHashSet in Java](https://www.geeksforgeeks.org/hashset-vs-treeset-vs-linkedhashset-java/)
+- [Java Set Interface](https://www.geeksforgeeks.org/set-in-java/)
+- [HashSet vs TreeSet vs LinkedHashSet in Java](https://www.geeksforgeeks.org/hashset-vs-treeset-vs-linkedhashset-java/)

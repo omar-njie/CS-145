@@ -1,5 +1,7 @@
 package com.omar.learn.cs145_new;
 
+import java.util.*;
+
 /**
  * @author Omar
  * @version 4/26/23
@@ -19,6 +21,20 @@ public class SetEx {
         // In Java, sets are represented by the Set interface in java.util
         // Set is implemented by HashSet, TreeSet, and LinkedHashSet
 
-        //
+        // HashSet: implemented using a hash table array;
+        //          very fast: O(1) for add, remove, and contains (All operations)
+        //          elements are stored in unpredictable order
+
+        // TreeSet: implemented using a binary search tree;
+        //          pretty fast: O(log n) for add, remove, and contains (All operations)
+        //          elements are stored in sorted order
+
+        // LinkedHashSet: O(1) but stores in order of insertion
+
+        List<String> list = new ArrayList<>();
+
+        Set<Integer> set_a = new TreeSet<>();
+        Set<Integer> set_b = new HashSet<>();
+        Set<String> set_c = new HashSet<>(list);
     }
 }
