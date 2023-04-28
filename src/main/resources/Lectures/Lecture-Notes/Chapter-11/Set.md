@@ -1,26 +1,3 @@
-// set: A collection of unique values (no duplicates allowed)
-//      that can perform the following operations efficiently:
-//      add, remove, search (contains), size, isEmpty, clear, equals
-
-// We don't think of a set as having indexes; we just add things
-// to the set in general and don't worry about order
-
-// Set implementation:
-// In Java, sets are represented by the Set interface in java.util
-// Set is implemented by HashSet, TreeSet, and LinkedHashSet
-
-// HashSet: implemented using a hash table array;
-//          very fast: O(1) for add, remove, and contains (All operations)
-//          elements are stored in unpredictable order
-
-// TreeSet: implemented using a binary search tree;
-//          pretty fast: O(log n) for add, remove, and contains (All operations)
-//          elements are stored in sorted order
-
-// LinkedHashSet: O(1) but stores in order of insertion
-
---------------------
-
 # Set in Java
 
 A Set is a collection of unique values where duplicates are not allowed. It is represented by the `Set` interface in `java.util` package. A Set performs the following operations efficiently: add, remove, search (contains), size, isEmpty, clear, and equals. Sets do not have indexes, and elements are added to the Set without worrying about order.
