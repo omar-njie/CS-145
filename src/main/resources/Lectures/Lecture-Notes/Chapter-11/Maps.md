@@ -86,29 +86,28 @@
 ## Going through a map
 ```java
 Map<String, Integer> ages = new HashMap<>();
-        ages.put("Marty", 19);
-        ages.put("Stuart", 44);
-        ages.put("Peter", 2);
-        ages.put("Kevin", 20);
-
-        for (String name : ages.keySet()) {
+    ages.put("Marty", 19);
+    ages.put("Stuart", 44);
+    ages.put("Peter", 2);
+    ages.put("Kevin", 20);  
+    
+    for (String name : ages.keySet()) {
             int age = ages.get(name);
             System.out.println(name + " -> " + age);
-        }
+    }
 ```
 
 ## Changing a map
 ```java
  Map<String, Integer> ages2 = new HashMap<>();
-        ages2.put("Marty", 19);
-        ages2.put("Stuart", 44);
-        ages2.put("Peter", 2);
-        ages2.put("Kevin", 20);
+     ages2.put("Marty", 19);
+     ages2.put("Stuart", 44);
+     ages2.put("Peter", 2);
+     ages2.put("Kevin", 20);
 
-        for (String name : ages2.keySet()) {
-            int age = ages2.get(name);
-            ages2.put(name, age + 10);
-        }
-        System.out.println(ages2);// {Peter=12, Marty=29, Kevin=30, Stuart=54}
-    }
+     for (String name : ages2.keySet()) {
+         int age = ages2.get(name);
+         ages2.put(name, age + 10);
+     }
+     System.out.println(ages2);// {Peter=12, Marty=29, Kevin=30, Stuart=54}
 ```
