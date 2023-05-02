@@ -12,15 +12,15 @@
   - In Java, maps are represented by the Map interface in java.util
   - Map is implemented by `HashMap`, `TreeMap`, and `LinkedHashMap`
 
-- HashMap: implemented using a hash table array;
+- `HashMap`: implemented using a hash table array;
            extremely fast: `O(1)` for `put`, `get`, and c`ontainsKey` (All operations)
            elements are stored in unpredictable order
 
-- TreeMap: implemented using a binary search tree;
-           very fast: O(log n) for put, get, and containsKey (All operations)
+- `TreeMap`: implemented using a binary search tree;
+           very fast: `O(log n)` for `put`, `get`, and `containsKey` (All operations)
            elements are stored in sorted order. Alphabetical or by numerical value
 
-- LinkedHashMap: `O(1)` but stores in order of insertion
+- `LinkedHashMap`: `O(1)` but stores in order of insertion
 
 ### Map Example
 ```java
