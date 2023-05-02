@@ -74,6 +74,16 @@ System.out.println(linkedHashSet); // Output: [apple, orange]
 
 Sets are useful in situations where we need to store unique values and order does not matter. Depending on the use case, one of the three Set implementations can be chosen for optimal performance.
 
+### Big-O Notation Definition
+- O(1) - Constant Time
+- O(n) - Linear Time
+- O(n^2) - Quadratic Time
+- O(log n) - Logarithmic Time
+- O(n^3) - Cubic Time
+- O(2^n) - Exponential Time
+- O(n!) - Factorial Time
+- O(n log n) - Linearithmic Time
+
 ## Set Operations
 
 The following table shows the time complexity of the operations on a Set:
