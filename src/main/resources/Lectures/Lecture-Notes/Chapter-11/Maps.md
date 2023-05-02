@@ -92,8 +92,8 @@ Map<String, Integer> ages = new HashMap<>();
     ages.put("Kevin", 20);  
     
     for (String name : ages.keySet()) {
-            int age = ages.get(name);
-            System.out.println(name + " -> " + age);
+        int age = ages.get(name);
+        System.out.println(name + " -> " + age);
     }
 ```
 
