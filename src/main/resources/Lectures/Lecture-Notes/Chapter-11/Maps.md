@@ -2,13 +2,13 @@
 - **Map**: Holds a set of unique keys and a collection of values, where each key is
        associated with one value.
 ---
-- basic map operations:
+### basic map operations:
   - put(key, value): adds a mapping from key to value
   - get(key): returns the value associated with key
   - containsKey(key): returns true if key is in the map
   - remove(key): removes the given key and its mapped value
 ---
-- Map Implementation:
+### Map Implementation:
   - In Java, maps are represented by the Map interface in java.util
   - Map is implemented by HashMap, TreeMap, and LinkedHashMap
 
@@ -22,7 +22,7 @@
 
 - LinkedHashMap: O(1) but stores in order of insertion
 
-## Map Example
+### Map Example
 ```java
  Map<String, Integer> map = new HashMap<>();
         map.put("Omar", 1);
