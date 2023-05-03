@@ -111,3 +111,32 @@ Map<String, Integer> ages = new HashMap<>();
      }
      System.out.println(ages2);// {Peter=12, Marty=29, Kevin=30, Stuart=54}
 ```
+
+```java
+public static int countUnique(Map<String, Integer> map) {
+        Set<Integer> set = new HashSet<>(map.values());
+        return set.size();
+    }
+
+    // Problem: reverse a map
+    public static Map<Integer, String> reverse(Map<String, Integer> map) {
+        Map<Integer, String> result = new HashMap<>();
+        for (String name : map.keySet()) {
+            int age = map.get(name);
+            result.put(age, name);
+        }
+        return result;
+    }
+
+    // How to count
+    static void count(List<String> list) {
+        Map<String, Integer> count_map = new HashMap<>();
+
+        for (String x : list) {
+            if (count_map.containsKey(x))
+                count_map.put(x, count_map.get(x) + 1);
+            else
+                count_map.put(x, 1);
+        }
+    }
+```
