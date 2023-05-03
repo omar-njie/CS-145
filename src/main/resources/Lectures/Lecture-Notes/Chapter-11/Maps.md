@@ -113,7 +113,7 @@ Map<String, Integer> ages = new HashMap<>();
 ```
 
 ```java
-public static int countUnique(Map<String, Integer> map) {
+    public static int countUnique(Map<String, Integer> map) {
         Set<Integer> set = new HashSet<>(map.values());
         return set.size();
     }
