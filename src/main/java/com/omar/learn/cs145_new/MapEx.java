@@ -110,5 +110,55 @@ public class MapEx {
             ages2.put(name, age + 10);
         }
         System.out.println(ages2);// {Peter=12, Marty=29, Kevin=30, Stuart=54}
+
+        // Problem: opposite mapping
+        Map<String, Double> stuGpa = new HashMap<>();
+        stuGpa.put("Marty", 3.45);
+        stuGpa.put("Stuart", 2.99);
+        stuGpa.put("Peter", 3.75);
+        stuGpa.put("Kevin", 2.5);
+
+        System.out.println("Martin -> " + stuGpa.get("Marty")); // Martin -> 3.45
+
+        // Proper map reversal
+        Map<Double, Set<String>> taGpa = new HashMap<>();
+        taGpa.put(3.6, new TreeSet<>());
+        taGpa.get(3.6).add("Jared");
+        taGpa.put(4.0, new TreeSet<>());
+        taGpa.get(4.0).add("Alyssa");
+        taGpa.put(2.9, new TreeSet<>());
+        taGpa.get(2.9).add("Steve");
+        taGpa.get(3.6).add("Stef");
+        taGpa.get(2.9).add("Rob");
+
+        System.out.println("Who got a 3.6? " + taGpa.get(3.6)); // [Jared, Stef]
+
+    }
+
+    public static int countUnique(Map<String, Integer> map) {
+        Set<Integer> set = new HashSet<>(map.values());
+        return set.size();
+    }
+
+    // Problem: reverse a map
+    public static Map<Integer, String> reverse(Map<String, Integer> map) {
+        Map<Integer, String> result = new HashMap<>();
+        for (String name : map.keySet()) {
+            int age = map.get(name);
+            result.put(age, name);
+        }
+        return result;
+    }
+
+    // How to count
+    static void count(List<String> list) {
+        Map<String, Integer> count_map = new HashMap<>();
+
+        for (String x : list) {
+            if (count_map.containsKey(x))
+                count_map.put(x, count_map.get(x) + 1);
+            else
+                count_map.put(x, 1);
+        }
     }
 }
