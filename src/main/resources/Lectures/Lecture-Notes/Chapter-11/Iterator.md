@@ -8,7 +8,7 @@
 
 ![img.png](iterator_img_ex.png)
 
-### Iterator methods
+### Iterator methods:
 | Iterator Methods | Description                                                                                                             |
 |------------------|-------------------------------------------------------------------------------------------------------------------------|
 | `hasNext()`      | return `true` if there are more elements to examine                                                                     |
