@@ -68,5 +68,21 @@ public class SetEx {
         for (String name : names) {
             System.out.println(name);
         }
+
+        Set<String> set = new HashSet<>();
+        set.add("apple");
+        set.add("banana");
+        set.add("orange");
+
+        Iterator<String> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            String element = iterator.next();
+            if (element.equals("banana")) {
+                iterator.remove();
+            }
+        }
+        // set.removeIf(element -> element.equals("banana"));
+        System.out.println(set); // [orange, apple]
+
     }
 }

@@ -99,17 +99,26 @@ The following table shows the time complexity of the operations on a Set:
 | equals    | O(n)    | O(n)     | O(n)          |
 
 
-## References
+### Proper way to remove from a set while iterating through it.
 
-- [Set (Java Platform SE 8 )](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html)
-- [HashSet (Java Platform SE 8 )](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
-- [TreeSet (Java Platform SE 8 )](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)
-- [LinkedHashSet (Java Platform SE 8 )](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)
-- [Set (Java Collections)](https://www.javatpoint.com/java-set)
-- [HashSet in Java](https://www.javatpoint.com/java-hashset)
-- [TreeSet in Java](https://www.javatpoint.com/java-treeset)
-- [LinkedHashSet in Java](https://www.javatpoint.com/java-linkedhashset)
-- [Java Set Interface](https://www.geeksforgeeks.org/set-in-java/)
-- [HashSet vs TreeSet vs LinkedHashSet in Java](https://www.geeksforgeeks.org/hashset-vs-treeset-vs-linkedhashset-java/)
-- [Java Set Interface](https://www.geeksforgeeks.org/set-in-java/)
-- [HashSet vs TreeSet vs LinkedHashSet in Java](https://www.geeksforgeeks.org/hashset-vs-treeset-vs-linkedhashset-java/)
+- When iterating through a set, you should use the Iterator object's remove() method to remove the current element from the set.
+
+### Example:
+```java
+Set<String> set = new HashSet<>();
+set.add("apple");
+set.add("banana");
+set.add("orange");
+
+Iterator<String> iterator = set.iterator();
+while (iterator.hasNext()) {
+    String element = iterator.next();
+    if (element.equals("banana")) {
+        iterator.remove();
+    }
+}
+```
+Example above can be replaced with this:
+```java
+set.removeIf(element -> element.equals("banana"));
+```
