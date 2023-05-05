@@ -28,11 +28,15 @@ public class SetsAndMaps {
 
     }
 
+    // Exercise 1
     static void sortAndRemoveDuplicates(List<Integer> list) {
         Set<Integer> rm = new HashSet<>(list);
         List<Integer> sorted = new ArrayList<>(rm);
         Collections.sort(sorted);
         System.out.println(sorted);
 
+
     }
+
+
 }
