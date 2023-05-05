@@ -5,4 +5,8 @@ package com.omar.learn.cs145_new;
  * @version 5.3.23
  */
 public class SetsAndMaps {
+
+    public static void main(String[] args) {
+
+    }
 }
