@@ -79,6 +79,38 @@ public class MapEx {
 
         System.out.println("Who got a 3.6? " + taGpa.get(3.6)); // [Jared, Stef]
 
+
+        // from video
+        Map<String, Integer> empIds = new HashMap<>();
+        empIds.put("John", 123);
+        empIds.put("Mary", 456);
+        empIds.put("Bob", 789);
+
+        System.out.println(empIds);
+        System.out.println(empIds.get("Mary")); // 456
+        System.out.println(empIds.containsKey("Mary")); // true
+        System.out.println(empIds.containsValue(123)); // true
+        empIds.replace("Mary", 999);
+        System.out.println(empIds); // {Bob=789, Mary=999, John=123}
+
+
+        Map<String, String> map1 = new HashMap<>();
+        map1.put("Marty", "Stepp");
+        map1.put("Stuart", "Reges");
+        map1.put("Jessica", "Miller");
+        map1.put("Amanda", "Camp");
+        map1.put("Hal", "Perkins");
+        System.out.println(isUnique(map1)); // true
+
+        Map<String, String> map2 = new HashMap<>();
+        map2.put("Kendrick", "Perkins");
+        map2.put("Stuart", "Reges");
+        map2.put("Jessica", "Miller");
+        map2.put("Bruce", "Reges");
+        map2.put("Hal", "Perkins");
+        System.out.println(isUnique(map2)); // false
+
+
     }
 
     public static int countUnique(Map<String, Integer> map) {
@@ -106,5 +138,20 @@ public class MapEx {
             else
                 count_map.put(x, 1);
         }
+    }
+
+    static boolean isUnique(Map<String, String> map) {
+        Set<String> values = new HashSet<>();
+
+        for (String key : map.keySet()) {
+            String value = map.get(key);
+
+            if (values.contains(value)) {
+                return false;
+            } else {
+                values.add(value);
+            }
+        }
+        return true;
     }
 }

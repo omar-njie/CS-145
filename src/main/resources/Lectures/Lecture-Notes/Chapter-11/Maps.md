@@ -48,16 +48,17 @@
 ---
 ## Map Methods:
 
-| Map Methods      | Description                                |
-|------------------|--------------------------------------------|
-| put(key, value)  | adds a mapping from key to value           |
-| get(key)         | returns the value associated with key      |
-| containsKey(key) | returns true if key is in the map          |
-| remove(key)      | removes the given key and its mapped value |
-| clear()          | removes all mappings                       |
-| size()           | returns the number of mappings             |
-| isEmpty()        | returns true if there are no mappings      |
-| toString()       | returns a string representation of the map |
+| Map Methods          | Description                                |
+|----------------------|--------------------------------------------|
+| put(key, value)      | adds a mapping from key to value           |
+| get(key)             | returns the value associated with key      |
+| containsKey(key)     | returns true if key is in the map          |
+| containsValue(value) | returns true if value is in the map        |
+| remove(key)          | removes the given key and its mapped value |
+| clear()              | removes all mappings                       |
+| size()               | returns the number of mappings             |
+| isEmpty()            | returns true if there are no mappings      |
+| toString()           | returns a string representation of the map |
 
 | Map Methods | Description                                           |
 |-------------|-------------------------------------------------------|
@@ -139,4 +140,19 @@ Map<String, Integer> ages = new HashMap<>();
                 count_map.put(x, 1);
         }
     }
+```
+
+```java
+static boolean isUnique(Map<String, String> map) {
+    Set<String> values = new HashSet<>();
+    for (String key : map.keySet()) {
+        String value = map.get(key);
+        if (values.contains(value)) {
+            return false;
+        } else {
+            values.add(value);
+        }
+    }
+    return true;
+}
 ```

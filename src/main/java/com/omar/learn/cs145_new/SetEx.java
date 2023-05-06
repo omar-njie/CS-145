@@ -64,5 +64,33 @@ public class SetEx {
         // set.removeIf(element -> element.equals("banana"));
         System.out.println(set); // [orange, apple]
 
+        Set<String> sets = new HashSet<>();
+        sets.add("apple");
+        sets.add("banana");
+        sets.add("orange");
+        sets.add("pear");
+        sets.add("grape");
+        sets.add("pineapple");
+        sets.add("watermelon");
+
+        removeEventLength(sets);
+
     }
+
+    static void removeEventLength(Set<String> sets) {
+       // sets.removeIf(set -> set.length() % 2 == 0);
+       // System.out.println(sets);
+        Iterator<String> itr = sets.iterator();
+        while (itr.hasNext()) {
+            String set = itr.next();
+
+            if (set.length() % 2 == 0) {
+                itr.remove();
+            }
+        }
+        System.out.println(sets);
+
+    }
+
+
 }
