@@ -111,6 +111,8 @@ public class MapEx {
         System.out.println(isUnique(map2)); // false
 
 
+
+
     }
 
     public static int countUnique(Map<String, Integer> map) {
