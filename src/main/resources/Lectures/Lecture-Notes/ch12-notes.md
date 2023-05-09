@@ -30,6 +30,16 @@ That being said, recursion is a powerful tool for solving certain types of probl
 graph structures. By breaking down the problem into smaller subproblems, it can simplify complex algorithms and make
 them easier to understand and maintain.
 
+## Recursion ans cases
+- Every recursive algorithm involves at least 2 cases:
+  - base case: A simple occurrence that can be answered directly.
+  - recursive case: A more complex occurrence of the problem that cannot be directly answered, but can instead be 
+    described in terms of smaller occurrences of the same problem.
+  
+- Some recursive algorithms have more than one base or recursive
+case, but all have at least one of each.
+- A crucial part of recursive programming is identifying these cases.
+
 ## Recursion vs Iteration
 
 Recursion and iteration are two ways to achieve repetition in programming. Recursion is when a function calls itself.
@@ -37,6 +47,20 @@ Iteration is when a loop repeats until a condition is met.
 
 ## Example:
 
+```java
+public class Main {
+    static void printStars(int n) {
+        if (n == 1) {
+            // base case just print one star
+            System.out.println("*");
+        } else {
+            // recursive case print one more star
+            System.out.println("*");
+            printStars(n - 1);
+        }
+    }
+}
+```
 ```java
 import java.util.*;
 

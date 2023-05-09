@@ -23,6 +23,7 @@ public class Recursion {
         int n = 6;
         int fibonacci = calculateFibonacci(n);
         System.out.println("Fibonacci sequence of " + n + ": " + fibonacci);
+        printStars(2);
     }
 
     // Recursive method to sum a list of integers
@@ -63,6 +64,17 @@ public class Recursion {
             return n;
         } else {
             return calculateFibonacci(n - 1) + calculateFibonacci(n - 2);
+        }
+    }
+
+      static void printStars(int n) {
+        if (n == 1) {
+            // base case just print one star
+            System.out.println("*");
+        } else {
+            // recursive case print one more star
+            System.out.print("*");
+            printStars(n - 1);
         }
     }
 }
