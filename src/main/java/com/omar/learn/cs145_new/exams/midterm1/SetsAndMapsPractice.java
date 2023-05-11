@@ -19,11 +19,11 @@ public class SetsAndMapsPractice {
         lst.add(2);
 
 
-        System.out.println(maxOccurences(lst));
+        System.out.println(maxOccurrences(lst));
 
     }
 
-    static int maxOccurences(List<Integer> lst) {
+    static int maxOccurrences(List<Integer> lst) {
         Map<Integer, Integer> map = new HashMap<>();
         for (Integer i : lst) {
             if (map.containsKey(i)) {
