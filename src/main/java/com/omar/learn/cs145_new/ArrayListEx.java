@@ -107,6 +107,15 @@ public class ArrayListEx {
 
         System.out.println(strings);
 
+        ArrayList<Integer> n = new ArrayList<>();
+        n.add(1);
+        n.add(2);
+        n.add(3);
+        n.add(4);
+        n.add(5);
+        System.out.println(n);
+        removeOdds(n);
+
 
     }
 
@@ -155,5 +164,17 @@ public class ArrayListEx {
                 i--;
             }
         }
+    }
+
+
+    static void removeOdds(ArrayList<Integer> lst) {
+        for (int i = 0; i < lst.size(); i++) {
+            int a = lst.get(i);
+            if (lst.get(i) % 2 != 0) {
+                lst.remove(i);
+                i--;
+            }
+        }
+        System.out.println(lst);
     }
 }

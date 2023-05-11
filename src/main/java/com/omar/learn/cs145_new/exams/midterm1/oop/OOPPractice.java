@@ -1,4 +1,4 @@
-package com.omar.learn.cs145_new.exams.midterm1;
+package com.omar.learn.cs145_new.exams.midterm1.oop;
 
 /**
  * @author omar
