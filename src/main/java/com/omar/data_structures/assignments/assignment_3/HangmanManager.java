@@ -1,5 +1,3 @@
-package com.omar.data_structures.assignments.assignment_3;
-
 import java.util.*;
 
 /**
@@ -10,7 +8,6 @@ import java.util.*;
  *
  * @author Omar
  * @version 5.14.23
- *
  */
 public class HangmanManager {
 
@@ -29,9 +26,7 @@ public class HangmanManager {
      * @param dictionary list of words
      * @param length     the target word length
      * @param max        the maximum number of wrong guesses allowed
-     *
      * @throws IllegalArgumentException if length is less than 1 or max is less than 0
-     *
      * @see String#repeat(int)
      */
     public HangmanManager(List<String> dictionary, int length, int max) {
@@ -85,12 +80,22 @@ public class HangmanManager {
      *
      * @return the current pattern.
      * @throws IllegalStateException if there are no words left.
+     *
+     * @see StringBuilder
      */
     public String pattern() {
         if (this.words.isEmpty())
             throw new IllegalStateException("No words left");
 
-        return this.pattern;
+        // add spaces between dashes
+        StringBuilder space = new StringBuilder();
+        for (int i = 0; i < this.pattern.length(); i++) {
+            space.append(this.pattern.charAt(i));
+            if (i < this.pattern.length() - 1)
+                space.append(" ");
+        }
+
+        return space.toString();
     }
 
 
@@ -119,7 +124,7 @@ public class HangmanManager {
             map.get(pattern).add(word);
         }
 
-        int max = 0;
+        int max = -1;
         String max_pattern = "";
         for (String pattern : map.keySet()) {
             int size = map.get(pattern).size();
