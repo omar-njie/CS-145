@@ -124,7 +124,7 @@ public class HangmanManager {
             map.get(pattern).add(word);
         }
 
-        int max = -1;
+        int max = 0;
         String max_pattern = "";
         for (String pattern : map.keySet()) {
             int size = map.get(pattern).size();
