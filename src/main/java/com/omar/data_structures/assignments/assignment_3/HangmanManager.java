@@ -1,3 +1,5 @@
+package com.omar.data_structures.assignments.assignment_3;
+
 import java.util.*;
 
 /**
@@ -87,15 +89,15 @@ public class HangmanManager {
         if (this.words.isEmpty())
             throw new IllegalStateException("No words left");
 
-        // add spaces between dashes
-        StringBuilder space = new StringBuilder();
+        // add
+        StringBuilder dashes = new StringBuilder();
         for (int i = 0; i < this.pattern.length(); i++) {
-            space.append(this.pattern.charAt(i));
+            dashes.append(this.pattern.charAt(i));
             if (i < this.pattern.length() - 1)
-                space.append(" ");
+                dashes.append(" ");
         }
 
-        return space.toString();
+        return dashes.toString();
     }
 
 
@@ -124,7 +126,7 @@ public class HangmanManager {
             map.get(pattern).add(word);
         }
 
-        int max = 0;
+        int max = -1;
         String max_pattern = "";
         for (String pattern : map.keySet()) {
             int size = map.get(pattern).size();
