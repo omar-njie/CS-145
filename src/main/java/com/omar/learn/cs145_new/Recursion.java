@@ -24,6 +24,7 @@ public class Recursion {
         int fibonacci = calculateFibonacci(n);
         System.out.println("Fibonacci sequence of " + n + ": " + fibonacci);
         printStars(2);
+        System.out.println(mystery(648));
     }
 
     // Recursive method to sum a list of integers
@@ -75,6 +76,16 @@ public class Recursion {
             // recursive case print one more star
             System.out.print("*");
             printStars(n - 1);
+        }
+    }
+
+    static int mystery(int n) {
+        if (n < 10) {
+            return n;
+        } else {
+            int a = n / 10;
+            int b = n % 10;
+            return mystery(a + b);
         }
     }
 }

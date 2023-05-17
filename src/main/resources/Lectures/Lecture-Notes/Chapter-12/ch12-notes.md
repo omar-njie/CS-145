@@ -143,3 +143,5 @@ n-2 and adds the results together.
 
 These examples illustrate how recursion can be used in conjunction with the
 
+- Recursion Zen: The art of properly identifying the best set of cases for a recursive
+algorithm and expressing them elegantly.
