@@ -51,8 +51,8 @@ Iteration is when a loop repeats until a condition is met.
 public class Main {
     static void printStars(int n) {
         if (n == 1) {
-            // base case just print one star
-            System.out.println("*");
+            // base case just end the line of output
+            System.out.println();
         } else {
             // recursive case print one more star
             System.out.println("*");
