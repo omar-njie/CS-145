@@ -25,6 +25,7 @@ public class Recursion {
         System.out.println("Fibonacci sequence of " + n + ": " + fibonacci);
         printStars(2);
         System.out.println(mystery(648));
+        printBinary(12);
     }
 
     // Recursive method to sum a list of integers
@@ -86,6 +87,26 @@ public class Recursion {
             int a = n / 10;
             int b = n % 10;
             return mystery(a + b);
+        }
+    }
+
+    static void printBinary(int n) {
+        if (n < 0) {
+            System.out.println("~");
+            printBinary(-n);
+        } else if (n < 2) {
+            System.out.println(n);
+        } else {
+            printBinary(n / 2);
+            printBinary(n % 2);
+        }
+    }
+
+    static void reverseLines(Scanner in) {
+        while (in.hasNextLine()) {
+            String line = in.nextLine();
+            reverseLines(in);
+            System.out.println(line);
         }
     }
 }
