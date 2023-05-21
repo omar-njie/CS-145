@@ -20,5 +20,15 @@ public class Main {
         System.out.println(angles);
         Collections.sort(angles);
         System.out.println(angles);
+
+        ArrayList<Employee> em = new ArrayList<>();
+        em.add(new Employee("a", 1));
+        em.add(new Employee("d", 0));
+        em.add(new Employee("c", 7));
+        em.add(new Employee("x", 4));
+        em.add(new Employee("e", 5));
+        System.out.println(em);
+        Collections.sort(em);
+        System.out.println(em);
     }
 }

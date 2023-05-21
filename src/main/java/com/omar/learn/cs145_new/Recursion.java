@@ -1,5 +1,6 @@
 package com.omar.learn.cs145_new;
 
+import java.io.File;
 import java.util.*;
 
 /**
@@ -26,6 +27,11 @@ public class Recursion {
         printStars(2);
         System.out.println(mystery(648));
         printBinary(12);
+        System.out.println(repeat("hello", 3));
+        int index = indexOf("Barack Obama", "bam");
+        System.out.println(index);  // Output: 8
+        // crawl(new File("/Users/omar/Desktop/College/Computer Science/Spring-Quarter-2023/CS-145"));
+
     }
 
     // Recursive method to sum a list of integers
@@ -69,7 +75,7 @@ public class Recursion {
         }
     }
 
-      static void printStars(int n) {
+    static void printStars(int n) {
         if (n == 0) {
             // base case just end the line of output
             System.out.println();
@@ -109,4 +115,41 @@ public class Recursion {
             System.out.println(line);
         }
     }
+
+    static String repeat(String s, int n) {
+        if (n == 0) {
+            return "";
+        } else {
+            return s + repeat(s, n - 1);
+        }
+    }
+
+    public static int indexOf(String str, String target) {
+        return indexOf(str, target, 0);
+    }
+
+    private static int indexOf(String str, String target, int index) {
+        if (index > str.length() - target.length()) {
+            return -1;  // Target string cannot fit starting from the current index
+        }
+        if (str.startsWith(target, index)) {
+            return index;  // Found a match at the current index
+        }
+        return indexOf(str, target, index + 1);  // Move to the next index and search recursively
+    }
+
+
+    static void crawl(File f) {
+        if (f.isDirectory()) {
+            File[] files = f.listFiles();
+            assert files != null;
+            for (File file : files) {
+                crawl(file);
+            }
+        } else {
+            System.out.println(f);
+        }
+    }
+
+
 }
