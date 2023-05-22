@@ -1,4 +1,6 @@
-package com.omar.data_structures.assignments.assignment_4;// Homework 4 (Grammar Solver)
+package com.omar.data_structures.assignments.assignment_4;
+
+// Homework 4 (Grammar Solver)
 // Instructor-provided client program that prompts a user for the name of a
 // grammar file and then gives the user the opportunity to generate random
 // versions of various elements of the grammar.
@@ -72,7 +74,7 @@ public class GrammarMain {
     // Strips empty lines and trims leading/trailing whitespace from each line.
     // pre: a file with the given name exists, throws FileNotFoundException otherwise
     public static List<String> readLines(String fileName) throws FileNotFoundException {
-        List<String> lines = new ArrayList<String>();
+        List<String> lines = new ArrayList<>();
         Scanner input = new Scanner(new File(fileName));
         while (input.hasNextLine()) {
             String line = input.nextLine().trim();
