@@ -3,6 +3,11 @@ package com.omar.data_structures.assignments.assignment_4;
 import java.util.*;
 
 /**
+ * The GrammarSolver class represents a grammar solver that can generate random occurrences of symbols based
+ * on the given grammar rules. It allows checking if a symbol is a non-terminal in the grammar
+ * and provides a method to retrieve all non-terminal symbols.
+ * Random occurrences of symbols can be generated using the grammar rules.
+ *
  * @author Omar
  * @version 5.21.23
  */
@@ -13,7 +18,7 @@ public class GrammarSolver {
     /**
      * Creates a GrammarSolver object that uses the given grammar rules.
      *
-     * @param rules a list of grammar rules in the form described in part (a)
+     * @param rules the grammar rules to use
      * @throws IllegalArgumentException if the rules list is null or empty
      * @throws IllegalArgumentException if the grammar contains more than one line for the same non-terminal
      */
@@ -37,12 +42,11 @@ public class GrammarSolver {
     }
 
     /**
-     * Returns true if the given symbol is a non-terminal of the grammar;
+     * Returns true if the given symbol is a non-terminal of the grammar.
      *
      * @param symbol the symbol to check if it is a non-terminal of the grammar
      * @return true if the given symbol is a non-terminal of the grammar;
      * @throws IllegalArgumentException if the given symbol is null or empty
-     * @see GrammarSolver#check_symbol(String)
      */
     public boolean contains(String symbol) {
         check_symbol(symbol);
@@ -66,7 +70,6 @@ public class GrammarSolver {
      * @param symbol the symbol to generate
      * @return a randomly generated occurrence of the symbol as a string
      * @throws IllegalArgumentException if the symbol is null or empty
-     * @see GrammarSolver#check_symbol(String)
      * @see StringBuilder
      */
     public String generate(String symbol) {
@@ -75,15 +78,18 @@ public class GrammarSolver {
         if (!(grammar.containsKey(symbol)))
             return symbol;
 
-        Random r = new Random();
+        Random rand = new Random();
         String[] terminals = grammar.get(symbol);
-        String random_terminal = terminals[r.nextInt(terminals.length)]; // random terminal
+        int get_length = terminals.length;
+        String random_terminal = terminals[rand.nextInt(get_length)];
 
         String[] symbols = random_terminal.split("\\s+");
         StringBuilder sb = new StringBuilder();
 
-        for (String s : symbols)
-            sb.append(generate(s)).append(" ");
+        for (String s : symbols) {
+            sb.append(generate(s));
+            sb.append(" ");
+        }
 
         return sb.toString().trim();
     }
@@ -91,7 +97,8 @@ public class GrammarSolver {
 
     // helper method to check if symbol is null or empty
     private void check_symbol(String symbol) {
-        if (symbol == null || symbol.isEmpty())
+        if (symbol == null || symbol.isEmpty()) {
             throw new IllegalArgumentException("Symbol is null or empty");
+        }
     }
 }
