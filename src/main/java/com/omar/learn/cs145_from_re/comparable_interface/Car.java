@@ -1,4 +1,4 @@
-package com.omar.learn.comparable_interface;
+package com.omar.learn.cs145_from_re.comparable_interface;
 
 
 import java.util.ArrayList;

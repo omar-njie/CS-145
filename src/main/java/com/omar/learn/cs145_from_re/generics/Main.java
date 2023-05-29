@@ -1,4 +1,4 @@
-package com.omar.learn.generics;
+package com.omar.learn.cs145_from_re.generics;
 
 import java.util.ArrayList;
 import java.util.List;

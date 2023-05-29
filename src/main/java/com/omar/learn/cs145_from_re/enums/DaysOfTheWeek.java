@@ -1,4 +1,4 @@
-package com.omar.learn.enums;
+package com.omar.learn.cs145_from_re.enums;
 
 /**
  * @author Omar

@@ -1,4 +1,4 @@
-package com.omar.learn.exams;
+package com.omar.learn.cs145_from_re.exams;
 
 import java.util.*;
 
