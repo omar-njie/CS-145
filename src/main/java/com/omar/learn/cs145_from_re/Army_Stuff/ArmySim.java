@@ -1,4 +1,4 @@
-package com.omar.learn.Army_Stuff;
+package com.omar.learn.cs145_from_re.Army_Stuff;
 
 import java.io.File;
 import java.util.Scanner;
@@ -24,10 +24,11 @@ public class ArmySim {
             String line = mainScanner.nextLine();
             line = line.trim();
             if (line.length() > 1) {
-                Scanner lineScan = new Scanner(line);
-                String type = lineScan.next();
-                String name = lineScan.next();
-                myArmy[currentCount] = createDude(name, type);
+                try (Scanner lineScan = new Scanner(line)) {
+                    String type = lineScan.next();
+                    String name = lineScan.next();
+                    myArmy[currentCount] = createDude(name, type);
+                }
                 currentCount++;
                 //System.out.println("TEST"+type + ":" + name);
             }

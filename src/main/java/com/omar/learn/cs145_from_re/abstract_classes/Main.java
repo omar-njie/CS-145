@@ -1,4 +1,4 @@
-package com.omar.learn.abstract_classes;
+package com.omar.learn.cs145_from_re.abstract_classes;
 
 /**
  * @author Omar

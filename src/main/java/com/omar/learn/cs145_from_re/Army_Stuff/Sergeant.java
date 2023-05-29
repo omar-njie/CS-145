@@ -1,4 +1,4 @@
-package com.omar.learn.Army_Stuff;
+package com.omar.learn.cs145_from_re.Army_Stuff;
 
 public class Sergeant extends Corporal {
 
